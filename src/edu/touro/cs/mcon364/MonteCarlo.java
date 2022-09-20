@@ -1,9 +1,6 @@
 package edu.touro.cs.mcon364;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class MonteCarlo {
     private static final int NUM_ITERATIONS = 10_000;
@@ -63,6 +60,6 @@ public class MonteCarlo {
             totalTimesBirthdayIsShared += containsSharedBirthday(generateRandomBirthdays(numBirthdays)) ? 1 : 0;
         }
 
-        return 1.0 * totalTimesBirthdayIsShared / NUM_ITERATIONS;
+        return ((double) totalTimesBirthdayIsShared) / NUM_ITERATIONS;
     }
 }
